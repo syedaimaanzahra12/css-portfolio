@@ -1,0 +1,80 @@
+.hamburgerMenu {
+  position: relative;
+  overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #d9dcd6; 
+  transition: all 0.3s ease;
+}
+
+.bar.open:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: #81c3d7; 
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: #81c3d7; 
+}
+
+.menu {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(224, 225, 221, 0.9); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Start off-screen */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Separate transitions for smooth effect */
+}
+
+.menu.show {
+  opacity: 1; /* Fully visible when shown */
+  transform: translateX(0); /* Move into view */
+}
+
+.link {
+  color: #16425b; /* White text */
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #81C784; /* Lighter green on hover */
+}
+
+@media (min-width: 768px) {
+  .hamburgerIcon,
+  .menu {
+      display: none; /* Hide hamburger and menu on larger screens */
+  }
+}
+@media (max-width:768px){
+  
+  
+}

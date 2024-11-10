@@ -1,0 +1,63 @@
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2f6690; 
+    color: #f9faf8; 
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight:700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Unordered list styling */
+ul {
+    list-style: none; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link styling */
+ul > :not(:first-child) {
+    margin-left: 20px; /* Space between links */
+}
+
+/* Link styling for Next.js Link component */
+ul a {
+    color: #d9dcd6;
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+/* Link hover effect */
+ul a:hover {
+    color: #81c3d7; 
+}
+
+/* Responsive styling */
+@media (max-width: 760px ) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    ul {
+        display: none;
+    }
+.logo{
+font-size:  1.5rem;
+}
+    
+}
