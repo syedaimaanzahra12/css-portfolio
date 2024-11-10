@@ -26,8 +26,8 @@ function HamburgerMenu() {
       {/* Menu Items */}
       <nav className={`${styles.menu} ${isOpen ? styles.show : ''}`}>
         <Link href="/" className={styles.link} onClick={closeMenu}>Home</Link>
-        <Link href="/about" className={styles.link} onClick={closeMenu}>About</Link>
-        <Link href="/contact" className={styles.link} onClick={closeMenu}>Contact</Link>
+        <Link href="./about" className={styles.link} onClick={closeMenu}>About</Link>
+        <Link href="./contact" className={styles.link} onClick={closeMenu}>Contact</Link>
       </nav>
     </div>
   );
